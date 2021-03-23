@@ -1,14 +1,17 @@
 #include "Direction.hpp"
 #include <iostream>
+#include <map>
 using namespace std;
 using namespace ariel;
 
-class Board
-{
-    
 
-    public:
-        void post(unsigned int row, unsigned int col, ariel::Direction, string content);
-        string read(unsigned int row, unsigned int col, ariel::Direction, unsigned int length);
-        void show(unsigned int row, unsigned int col, ariel::Direction, unsigned int length);
-};
+namespace ariel
+{
+    class Board
+    {
+        public:
+        void post(uint row, uint col, ariel::Direction, string message);
+        static string read(uint row, uint col, ariel::Direction, uint length);
+        void show();
+    };
+}
